@@ -21,8 +21,8 @@ namespace petDashboard
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         public FormLogin()
         {
-            InitializeComponent();
-            
+            DB.ConnectToMongoService();
+            InitializeComponent();            
         }
 
         private void openChildForm(Form childForm)
@@ -61,12 +61,78 @@ namespace petDashboard
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        /*private void button1_Click(object sender, EventArgs e)
+        private void registerBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormMenu menu = new FormMenu();
-            menu.ShowDialog();
-            this.Close();
-        }*/
+            reset();
+            switchPanel(registerPanel);
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            if (loginTextbox.Text != "" && passwdTextbox.Text != "")
+            {
+                if(DB.loginBD(loginTextbox.Text, passwdTextbox.Text))
+                {
+                    this.Hide();
+                    FormMenu menu = new FormMenu();
+                    menu.ShowDialog();
+                    this.Close();
+                } else
+                {
+                    resultText.ForeColor = System.Drawing.Color.Red;
+                    resultText.Text = "Login não encontrado";
+                }
+            }
+        }
+
+        private void registerBtn1_Click(object sender, EventArgs e)
+        {
+            if(loginTextRegister.Text != "" && passwd1TextRegister.Text != "" && passwdTextRegister.Text == passwd1TextRegister.Text)
+            {
+                if (DB.registerBD(loginTextRegister.Text, passwdTextRegister.Text))
+                {
+                    resultText.ForeColor = System.Drawing.Color.Green;
+                    resultText.Text = "Cadastro efetuado com sucesso";
+                } else
+                {
+                    resultText.ForeColor = System.Drawing.Color.Red;
+                    resultText.Text = "Falha no cadastro";
+                }
+            } else
+            {
+                resultText.ForeColor = System.Drawing.Color.Red;
+                resultText.Text = "Informações incorretas";
+            }
+        }
+
+        private void voltarBtn_Click(object sender, EventArgs e)
+        {
+            reset();
+            switchPanel(panelLogin);
+        }
+
+        private void reset()
+        {
+            resultText.Text = "";
+            loginTextbox.Text = "";
+            passwdTextbox.Text = "";
+            loginTextRegister.Text = "";
+            passwdTextRegister.Text = "";
+            passwd1TextRegister.Text = "";
+        }
+
+        private void switchPanel(Panel panel)
+        {
+            if(panel == registerPanel)
+            {
+                panelLogin.Visible = false;
+                registerPanel.Visible = true;
+            } else
+            {
+                panelLogin.Visible = true;
+                registerPanel.Visible = false;
+            }
+        }
+
     }
 }

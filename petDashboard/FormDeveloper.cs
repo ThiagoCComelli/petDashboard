@@ -16,6 +16,10 @@ namespace petDashboard
         public FormDeveloper()
         {
             InitializeComponent();
+            if (Global.user.mode == null) 
+            {
+                permissaoLabel.Text = "Você ainda não possui acesso ao sistema, solicite o acesso ao desenvolvedor.";
+            }
         }
 
         private void FormDeveloper_Load(object sender, EventArgs e)

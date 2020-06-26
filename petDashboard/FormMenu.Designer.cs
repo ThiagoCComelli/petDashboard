@@ -55,6 +55,7 @@
             this.redimensionIcon = new FontAwesome.Sharp.IconPictureBox();
             this.minimizeIcon = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.reuniaoPanel.SuspendLayout();
             this.usersPanel.SuspendLayout();
@@ -66,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.closeIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redimensionIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeIcon)).BeginInit();
+            this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -246,7 +248,7 @@
             this.allusersBtn.Rotation = 0D;
             this.allusersBtn.Size = new System.Drawing.Size(209, 32);
             this.allusersBtn.TabIndex = 1;
-            this.allusersBtn.Text = "Usuarios cadastrados";
+            this.allusersBtn.Text = "Membros do PET";
             this.allusersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.allusersBtn.UseVisualStyleBackColor = false;
             // 
@@ -553,13 +555,34 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panelDesktop.Controls.Add(this.iconButton1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(226, 44);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(774, 516);
             this.panelDesktop.TabIndex = 2;
             // 
-            // Form1
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconSize = 16;
+            this.iconButton1.Location = new System.Drawing.Point(695, 484);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(67, 25);
+            this.iconButton1.TabIndex = 0;
+            this.iconButton1.Text = "Deslogar";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -570,7 +593,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(1000, 560);
-            this.Name = "Form1";
+            this.Name = "FormMenu";
             this.panel1.ResumeLayout(false);
             this.reuniaoPanel.ResumeLayout(false);
             this.usersPanel.ResumeLayout(false);
@@ -583,6 +606,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.closeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redimensionIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeIcon)).EndInit();
+            this.panelDesktop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -616,6 +640,7 @@
         private FontAwesome.Sharp.IconButton novaReuniaoBtn;
         private FontAwesome.Sharp.IconButton consultarBtn;
         private FontAwesome.Sharp.IconButton reuniaoBtn;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
 

@@ -27,6 +27,11 @@ namespace petDashboard
         {
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            if(Global.user.mode == null)
+            {
+                panel1.Visible = false;
+                openChildForm(new FormDeveloper());
+            }
         }
         private void reset()
         {
@@ -129,6 +134,14 @@ namespace petDashboard
         private void minimizeIcon_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLogin login = new FormLogin();
+            login.ShowDialog();
+            this.Close();
         }
     }
 }

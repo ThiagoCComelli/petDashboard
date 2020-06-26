@@ -33,6 +33,7 @@
             this.whatsIcon = new FontAwesome.Sharp.IconButton();
             this.githubIcon = new FontAwesome.Sharp.IconButton();
             this.linkedinIcon = new FontAwesome.Sharp.IconButton();
+            this.permissaoLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.permissaoLabel);
             this.panel1.Controls.Add(this.whatsIcon);
             this.panel1.Controls.Add(this.githubIcon);
             this.panel1.Controls.Add(this.linkedinIcon);
@@ -130,6 +132,18 @@
             this.linkedinIcon.UseVisualStyleBackColor = true;
             this.linkedinIcon.Click += new System.EventHandler(this.linkedinIcon_Click);
             // 
+            // permissaoLabel
+            // 
+            this.permissaoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.permissaoLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.permissaoLabel.ForeColor = System.Drawing.Color.Gainsboro;
+            this.permissaoLabel.Location = new System.Drawing.Point(12, 55);
+            this.permissaoLabel.Name = "permissaoLabel";
+            this.permissaoLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.permissaoLabel.Size = new System.Drawing.Size(776, 59);
+            this.permissaoLabel.TabIndex = 4;
+            this.permissaoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormDeveloper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,5 +166,6 @@
         private FontAwesome.Sharp.IconButton linkedinIcon;
         private FontAwesome.Sharp.IconButton githubIcon;
         private FontAwesome.Sharp.IconButton whatsIcon;
+        private System.Windows.Forms.Label permissaoLabel;
     }
 }
