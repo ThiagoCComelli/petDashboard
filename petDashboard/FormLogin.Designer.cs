@@ -28,29 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.closeIcon = new FontAwesome.Sharp.IconPictureBox();
             this.minimizeIcon = new FontAwesome.Sharp.IconPictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.centralPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::petDashboard.Properties.Resources.logo_petcomp;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(291, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -93,12 +80,26 @@
             this.minimizeIcon.TabStop = false;
             this.minimizeIcon.Click += new System.EventHandler(this.minimizeIcon_Click);
             // 
-            // panel1
+            // centralPanel
             // 
-            this.panel1.Location = new System.Drawing.Point(27, 180);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(305, 298);
-            this.panel1.TabIndex = 6;
+            this.centralPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.centralPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.centralPanel.Location = new System.Drawing.Point(25, 177);
+            this.centralPanel.Name = "centralPanel";
+            this.centralPanel.Size = new System.Drawing.Size(305, 298);
+            this.centralPanel.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::petDashboard.Properties.Resources.logo_petcomp;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(305, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FormLogin
             // 
@@ -107,7 +108,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(354, 497);
             this.ControlBox = false;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.centralPanel);
             this.Controls.Add(this.closeIcon);
             this.Controls.Add(this.minimizeIcon);
             this.Controls.Add(this.pictureBox2);
@@ -116,20 +117,19 @@
             this.MaximumSize = new System.Drawing.Size(370, 513);
             this.MinimumSize = new System.Drawing.Size(370, 513);
             this.Name = "FormLogin";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private FontAwesome.Sharp.IconPictureBox closeIcon;
         private FontAwesome.Sharp.IconPictureBox minimizeIcon;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel centralPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace petDashboard
 {
-    public partial class Form1 : Form
+    public partial class FormLoginPanel : Form
     {
-        public Form1()
+        public FormLoginPanel()
         {
             InitializeComponent();
         }

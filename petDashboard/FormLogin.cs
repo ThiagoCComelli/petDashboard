@@ -13,6 +13,8 @@ namespace petDashboard
 {
     public partial class FormLogin : Form
     {
+        private Form currentChildForm;
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -20,6 +22,27 @@ namespace petDashboard
         public FormLogin()
         {
             InitializeComponent();
+            
+        }
+
+        private void openChildForm(Form childForm)
+        {
+            if (currentChildForm != null || currentChildForm == childForm)
+            {
+                currentChildForm.Close();
+                currentChildForm = null;
+            }
+            else if (currentChildForm != childForm)
+            {
+                currentChildForm = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                centralPanel.Controls.Add(childForm);
+                centralPanel.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
+            }
         }
 
         private void closeIcon_Click(object sender, EventArgs e)
