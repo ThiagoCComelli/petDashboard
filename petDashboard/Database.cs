@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Bson;
+using System.Windows.Forms;
+using System.Runtime.CompilerServices;
 
 namespace petDashboard
 {
@@ -52,6 +54,33 @@ namespace petDashboard
                 return false;
             }
         }
+
+        public static void updateInfo(string name, string email, string foto, string senha,string periodo)
+        {
+            try
+            {
+                Global.user.nome = name;
+                Global.user.email = email;
+                Global.user.fotoLink = foto;
+                Global.user.password = senha;
+                Global.user.periodo = periodo;
+
+                string filter = "{'_id':'"+Global.user._id+"'}";
+
+                BsonDocument filterdoc = BsonDocument.Parse(filter);
+                
+                Global.collectionLogin.ReplaceOne(filterdoc,Global.user);
+
+                var results = Global.collectionLogin.Find(x => x._id == Global.user._id).ToList();
+                if (results.Count == 1)
+                {
+                    Global.user = results[0];
+                }
+            } catch
+            {
+                
+            }
+        }
     }
     public class Global
     {
@@ -65,5 +94,9 @@ namespace petDashboard
         public string _id { get; set; }
         public string password { get; set; }
         public string mode { get; set; }
+        public string email { get; set; }
+        public string nome { get; set; }
+        public string periodo { get; set; }
+        public string fotoLink { get; set; }
     }
 }

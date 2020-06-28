@@ -143,5 +143,10 @@ namespace petDashboard
             login.ShowDialog();
             this.Close();
         }
+
+        private void profileBtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormProfile());
+        }
     }
 }

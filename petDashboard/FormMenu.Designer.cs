@@ -228,6 +228,7 @@
             this.profileBtn.Text = "Meu perfil";
             this.profileBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.profileBtn.UseVisualStyleBackColor = false;
+            this.profileBtn.Click += new System.EventHandler(this.profileBtn_Click);
             // 
             // allusersBtn
             // 
@@ -564,6 +565,7 @@
             // 
             // iconButton1
             // 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -573,7 +575,7 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(695, 484);
+            this.iconButton1.Location = new System.Drawing.Point(698, 483);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Rotation = 0D;
             this.iconButton1.Size = new System.Drawing.Size(67, 25);
