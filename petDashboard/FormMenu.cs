@@ -43,13 +43,17 @@ namespace petDashboard
         }
         private void openChildForm(Form childForm)
         {
-            if(currentChildForm != null || currentChildForm == childForm)
+            if (currentChildForm != null && currentChildForm.Name == childForm.Name)
             {
                 currentChildForm.Close();
                 currentChildForm = null;
             }
-            else if(currentChildForm != childForm)
+            else
             {
+                if(currentChildForm != null)
+                {
+                    currentChildForm.Close();
+                }
                 currentChildForm = childForm;
                 childForm.TopLevel = false;
                 childForm.FormBorderStyle = FormBorderStyle.None;
@@ -107,7 +111,7 @@ namespace petDashboard
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-            FormBorderStyle = FormBorderStyle.Sizable;
+            /*FormBorderStyle = FormBorderStyle.Sizable;*/
 /*            WindowState = FormWindowState.Normal;
 */        }
 
@@ -120,13 +124,13 @@ namespace petDashboard
         {
             if (WindowState == FormWindowState.Normal)
             {
-                WindowState = FormWindowState.Maximized;
-                FormBorderStyle = FormBorderStyle.None;
+                /*WindowState = FormWindowState.Maximized;
+                FormBorderStyle = FormBorderStyle.None;*/
             }
             else
             {
                 WindowState = FormWindowState.Normal;
-                FormBorderStyle = FormBorderStyle.Sizable;
+                /*FormBorderStyle = FormBorderStyle.Sizable;*/
 
             }
         }
@@ -147,6 +151,11 @@ namespace petDashboard
         private void profileBtn_Click(object sender, EventArgs e)
         {
             openChildForm(new FormProfile());
+        }
+
+        private void allusersBtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormUsers());
         }
     }
 }

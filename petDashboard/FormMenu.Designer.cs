@@ -252,6 +252,7 @@
             this.allusersBtn.Text = "Membros do PET";
             this.allusersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.allusersBtn.UseVisualStyleBackColor = false;
+            this.allusersBtn.Click += new System.EventHandler(this.allusersBtn_Click);
             // 
             // usersBtn
             // 
@@ -594,6 +595,7 @@
             this.Controls.Add(this.upPanel);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimumSize = new System.Drawing.Size(1000, 560);
             this.Name = "FormMenu";
             this.panel1.ResumeLayout(false);

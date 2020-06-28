@@ -55,6 +55,27 @@ namespace petDashboard
             }
         }
 
+        public static User updateUserMode(User user, string mode)
+        {
+            try
+            {
+                string filter = "{'_id':'" + user._id + "'}";
+                string param = "{$set: {'mode':'" + mode + "'} }";
+
+                BsonDocument filterdoc = BsonDocument.Parse(filter);
+                BsonDocument document = BsonDocument.Parse(param);
+
+                Global.collectionLogin.UpdateOne(filterdoc, document);
+
+                var results = Global.collectionLogin.Find(x => x._id == user._id).ToList();
+
+                return results[0];
+            } catch
+            {
+                return user;
+            }
+        }
+
         public static void updateInfo(string name, string email, string foto, string senha,string periodo)
         {
             try
@@ -98,5 +119,10 @@ namespace petDashboard
         public string nome { get; set; }
         public string periodo { get; set; }
         public string fotoLink { get; set; }
+
+        public static implicit operator User(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
