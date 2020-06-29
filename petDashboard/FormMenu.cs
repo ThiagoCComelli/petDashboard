@@ -157,5 +157,10 @@ namespace petDashboard
         {
             openChildForm(new FormUsers());
         }
+
+        private void novaReuniaoBtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormNewMeeting());
+        }
     }
 }

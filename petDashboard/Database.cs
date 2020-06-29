@@ -18,10 +18,14 @@ namespace petDashboard
             IMongoClient clients = new MongoClient(connectionString);
             IMongoDatabase databases = clients.GetDatabase("PETDashboard");
             IMongoCollection<User> collectionsLogin = databases.GetCollection<User>("users");
+            IMongoCollection<Meeting> collectionsMeetings = databases.GetCollection<Meeting>("meeting");
+            IMongoCollection<Meeting> collectionsMeetingsTags = databases.GetCollection<Meeting>("meetingPerTags");
 
             Global.client = clients;
             Global.database = databases;
             Global.collectionLogin = collectionsLogin;
+            Global.collectionMeeting = collectionsMeetings;
+            Global.collectionMeetingTags = collectionsMeetingsTags;
         }
 
         public static bool registerBD(string login,string passwd)
@@ -102,12 +106,64 @@ namespace petDashboard
                 
             }
         }
+        public static bool newMeeting(FlowLayoutPanel item, DateTime time,string privacy)
+        {
+            string conteudo = "";
+            int err = 0;
+
+            foreach (var i in item.Controls.OfType<MeetingItem>())
+            {
+                i.update();
+                if (i.Conteudo != "" && i.Categoria != "Escolha um item" && i.Privacy != null)
+                {
+                    i.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+                    conteudo += i.Categoria.ToUpper() + "\n" + i.Conteudo + "\n\n";
+                }
+                else
+                {
+                    i.BackColor = System.Drawing.Color.Red;
+                    err++;
+                }
+            }
+            if (err == 0)
+            {
+                List<Meeting> meetings = new List<Meeting>();
+                try
+                {
+                    Global.collectionMeeting.InsertOne(new Meeting { date = time,content = conteudo,author = Global.user._id,privacy = privacy});
+                    foreach(var i in item.Controls.OfType<MeetingItem>())
+                    {
+                        Meeting localItem = new Meeting();
+
+                        localItem.date = time;
+                        localItem.content = i.Conteudo;
+                        localItem.author = Global.user._id;
+                        localItem.privacy = i.Privacy;
+
+                        meetings.Add(localItem);
+                    }
+                    Global.collectionMeetingTags.InsertMany(meetings);
+
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
     public class Global
     {
         public static IMongoClient client;
         public static IMongoDatabase database;
         public static IMongoCollection<User> collectionLogin;
+        public static IMongoCollection<Meeting> collectionMeeting;
+        public static IMongoCollection<Meeting> collectionMeetingTags;
         public static User user;
     }
     public class User
@@ -120,9 +176,12 @@ namespace petDashboard
         public string periodo { get; set; }
         public string fotoLink { get; set; }
 
-        public static implicit operator User(string v)
-        {
-            throw new NotImplementedException();
-        }
+    }
+    public class Meeting
+    {
+        public DateTime date { get; set; }
+        public string content { get; set; }
+        public string author { get; set; }
+        public string privacy { get; set; }
     }
 }

@@ -123,6 +123,7 @@
             this.novaReuniaoBtn.Text = "Nova reuniao";
             this.novaReuniaoBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.novaReuniaoBtn.UseVisualStyleBackColor = false;
+            this.novaReuniaoBtn.Click += new System.EventHandler(this.novaReuniaoBtn_Click);
             // 
             // consultarBtn
             // 
@@ -487,14 +488,14 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 12);
+            this.label1.Location = new System.Drawing.Point(3, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 20);
+            this.label1.Size = new System.Drawing.Size(203, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "PET CCO - Dashboard";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // upPanel
             // 
@@ -605,7 +606,6 @@
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.upPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redimensionIcon)).EndInit();

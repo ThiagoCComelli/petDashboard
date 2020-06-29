@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.centralPanel = new System.Windows.Forms.Panel();
+            this.resultText = new System.Windows.Forms.Label();
             this.registerPanel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.voltarBtn = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.minimizeIcon = new FontAwesome.Sharp.IconPictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.resultText = new System.Windows.Forms.Label();
             this.centralPanel.SuspendLayout();
             this.registerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -78,10 +78,20 @@
             this.centralPanel.Controls.Add(this.resultText);
             this.centralPanel.Controls.Add(this.registerPanel);
             this.centralPanel.Controls.Add(this.panelLogin);
-            this.centralPanel.Location = new System.Drawing.Point(25, 177);
+            this.centralPanel.Location = new System.Drawing.Point(25, 185);
             this.centralPanel.Name = "centralPanel";
-            this.centralPanel.Size = new System.Drawing.Size(305, 298);
+            this.centralPanel.Size = new System.Drawing.Size(321, 298);
             this.centralPanel.TabIndex = 6;
+            // 
+            // resultText
+            // 
+            this.resultText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.resultText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultText.Location = new System.Drawing.Point(3, 266);
+            this.resultText.Name = "resultText";
+            this.resultText.Size = new System.Drawing.Size(313, 28);
+            this.resultText.TabIndex = 32;
+            this.resultText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // registerPanel
             // 
@@ -391,7 +401,7 @@
             this.closeIcon.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.closeIcon.IconColor = System.Drawing.Color.Gainsboro;
             this.closeIcon.IconSize = 18;
-            this.closeIcon.Location = new System.Drawing.Point(333, 5);
+            this.closeIcon.Location = new System.Drawing.Point(349, 5);
             this.closeIcon.Name = "closeIcon";
             this.closeIcon.Size = new System.Drawing.Size(18, 18);
             this.closeIcon.TabIndex = 5;
@@ -406,7 +416,7 @@
             this.minimizeIcon.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.minimizeIcon.IconColor = System.Drawing.Color.Gainsboro;
             this.minimizeIcon.IconSize = 18;
-            this.minimizeIcon.Location = new System.Drawing.Point(309, 5);
+            this.minimizeIcon.Location = new System.Drawing.Point(325, 5);
             this.minimizeIcon.Name = "minimizeIcon";
             this.minimizeIcon.Size = new System.Drawing.Size(18, 18);
             this.minimizeIcon.TabIndex = 3;
@@ -419,7 +429,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(354, 36);
+            this.pictureBox2.Size = new System.Drawing.Size(370, 36);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
@@ -428,23 +438,13 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::petDashboard.Properties.Resources.logo_petcomp;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(305, 115);
+            this.pictureBox1.Size = new System.Drawing.Size(321, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // resultText
-            // 
-            this.resultText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.resultText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultText.Location = new System.Drawing.Point(3, 266);
-            this.resultText.Name = "resultText";
-            this.resultText.Size = new System.Drawing.Size(297, 28);
-            this.resultText.TabIndex = 32;
-            this.resultText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormLogin
             // 
@@ -459,6 +459,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(370, 513);
             this.MinimumSize = new System.Drawing.Size(370, 513);
             this.Name = "FormLogin";
