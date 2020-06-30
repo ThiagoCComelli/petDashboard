@@ -32,7 +32,7 @@ namespace petDashboard
         {
             try
             {
-                Global.collectionLogin.InsertOne(new User {_id=login,password=passwd});
+                Global.collectionLogin.InsertOne(new User { _id = login,password=passwd,author=login});
                 return true;
             } catch
             {
@@ -45,7 +45,7 @@ namespace petDashboard
             try
             {
                 var results = Global.collectionLogin.Find(x => x._id == login && x.password == passwd).ToList();
-                if(results.Count == 1)
+                if (results.Count == 1)
                 {
                     Global.user = results[0];
                     return true;
@@ -90,7 +90,7 @@ namespace petDashboard
                 Global.user.password = senha;
                 Global.user.periodo = periodo;
 
-                string filter = "{'_id':'"+Global.user._id+"'}";
+                string filter = "{'_id':'"+Global.user._id + "'}";
 
                 BsonDocument filterdoc = BsonDocument.Parse(filter);
                 
@@ -130,7 +130,7 @@ namespace petDashboard
                 List<Meeting> meetings = new List<Meeting>();
                 try
                 {
-                    Global.collectionMeeting.InsertOne(new Meeting { date = time,content = conteudo,author = Global.user._id,privacy = privacy});
+                    Global.collectionMeeting.InsertOne(new Meeting { date = time,content = conteudo,author = Global.user._id, privacy = privacy});
                     foreach(var i in item.Controls.OfType<MeetingItem>())
                     {
                         Meeting localItem = new Meeting();
@@ -139,6 +139,7 @@ namespace petDashboard
                         localItem.content = i.Conteudo;
                         localItem.author = Global.user._id;
                         localItem.privacy = i.Privacy;
+                        localItem.tag = i.Categoria;
 
                         meetings.Add(localItem);
                     }
@@ -156,6 +157,13 @@ namespace petDashboard
                 return false;
             }
         }
+
+        public static List<Meeting> allMyMeetings()
+        {
+            var results = Global.collectionMeeting.Find(x => x.author == Global.user.author).ToList();
+
+            return results;
+        }
     }
     public class Global
     {
@@ -169,6 +177,7 @@ namespace petDashboard
     public class User
     {
         public string _id { get; set; }
+        public string author { get; set; }
         public string password { get; set; }
         public string mode { get; set; }
         public string email { get; set; }
@@ -179,8 +188,10 @@ namespace petDashboard
     }
     public class Meeting
     {
+        public ObjectId _id { get; set; }
         public DateTime date { get; set; }
         public string content { get; set; }
+        public string tag { get; set; }
         public string author { get; set; }
         public string privacy { get; set; }
     }

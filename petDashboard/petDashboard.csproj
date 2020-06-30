@@ -85,6 +85,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="FormConsult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsult.Designer.cs">
+      <DependentUpon>FormConsult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMyMeetings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMyMeetings.Designer.cs">
+      <DependentUpon>FormMyMeetings.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNewMeeting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +139,12 @@
     <Compile Include="MeetingItem.Designer.cs">
       <DependentUpon>MeetingItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="MeetingsInterfaceItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MeetingsInterfaceItem.Designer.cs">
+      <DependentUpon>MeetingsInterfaceItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserProfileItem.cs">
@@ -135,6 +153,9 @@
     <Compile Include="UserProfileItem.Designer.cs">
       <DependentUpon>UserProfileItem.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormConsult.resx">
+      <DependentUpon>FormConsult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDeveloper.resx">
       <DependentUpon>FormDeveloper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMyMeetings.resx">
+      <DependentUpon>FormMyMeetings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNewMeeting.resx">
       <DependentUpon>FormNewMeeting.cs</DependentUpon>
@@ -155,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MeetingItem.resx">
       <DependentUpon>MeetingItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeetingsInterfaceItem.resx">
+      <DependentUpon>MeetingsInterfaceItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

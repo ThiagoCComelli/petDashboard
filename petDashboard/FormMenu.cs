@@ -14,7 +14,7 @@ namespace petDashboard
 {
     public partial class FormMenu : Form
     {
-        private Form currentChildForm;
+        public Form currentChildForm;
         private Panel activePanel;
         
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -33,15 +33,16 @@ namespace petDashboard
                 openChildForm(new FormDeveloper());
             }
         }
-        private void reset()
+        public void reset()
         {
             if(currentChildForm != null)
             {
                 currentChildForm.Close();
                 currentChildForm = null;
+                panelDesktop.Controls.Clear();
             }
         }
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if (currentChildForm != null && currentChildForm.Name == childForm.Name)
             {
@@ -161,6 +162,11 @@ namespace petDashboard
         private void novaReuniaoBtn_Click(object sender, EventArgs e)
         {
             openChildForm(new FormNewMeeting());
+        }
+
+        private void consultarBtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormConsult(panelDesktop));
         }
     }
 }

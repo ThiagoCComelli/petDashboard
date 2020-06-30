@@ -25,7 +25,7 @@ namespace petDashboard
         #region Properties
         private string _conteudo;
         private string _categoria;
-        private string _privacy = null;
+        private string _privacy = "Publico";
 
         [Category("Custom Props")]
         public string Conteudo

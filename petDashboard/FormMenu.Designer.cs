@@ -147,6 +147,7 @@
             this.consultarBtn.Text = "Consultar reuniao";
             this.consultarBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.consultarBtn.UseVisualStyleBackColor = false;
+            this.consultarBtn.Click += new System.EventHandler(this.consultarBtn_Click);
             // 
             // reuniaoBtn
             // 
