@@ -21,6 +21,7 @@ namespace petDashboard
         private string _conteudo;
         private string _data;
         private string _author;
+        private string _privacy;
 
         [Category("Custom Props")]
         public string Conteudo
@@ -41,6 +42,13 @@ namespace petDashboard
         {
             get { return _author; }
             set { _author = value; autor.Text = value; }
+        }
+
+        [Category("Custom Props")]
+        public string Privacy
+        {
+            get { return _privacy; }
+            set { _privacy = value; Privacy_.Text = value; }
         }
         #endregion
     }

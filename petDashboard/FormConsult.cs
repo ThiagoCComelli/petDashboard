@@ -47,17 +47,17 @@ namespace petDashboard
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormMyMeetings(true));
+            openChildForm(new FormMyMeetings("allMy"));
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormMyMeetings(false));
+            openChildForm(new FormMyMeetings("allPublic"));
         }
 
         private void iconButton3_Click_1(object sender, EventArgs e)
         {
-
+            openChildForm(new FormMyMeetings("allPerTags"));
         }
     }
 }

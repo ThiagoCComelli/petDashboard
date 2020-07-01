@@ -34,12 +34,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dia = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Privacy_ = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel1.Controls.Add(this.Privacy_);
             this.panel1.Controls.Add(this.conteudo);
             this.panel1.Controls.Add(this.autor);
             this.panel1.Controls.Add(this.label4);
@@ -108,6 +110,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Reuniao do dia:";
             // 
+            // Privacy_
+            // 
+            this.Privacy_.AutoSize = true;
+            this.Privacy_.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Privacy_.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Privacy_.Location = new System.Drawing.Point(656, 4);
+            this.Privacy_.Name = "Privacy_";
+            this.Privacy_.Size = new System.Drawing.Size(36, 21);
+            this.Privacy_.TabIndex = 5;
+            this.Privacy_.Text = "null";
+            // 
             // MeetingsInterfaceItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,5 +143,6 @@
         private System.Windows.Forms.Label dia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Privacy_;
     }
 }

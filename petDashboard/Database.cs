@@ -28,11 +28,11 @@ namespace petDashboard
             Global.collectionMeetingTags = collectionsMeetingsTags;
         }
 
-        public static bool registerBD(string login,string passwd)
+        public static bool registerBD(string login, string passwd)
         {
             try
             {
-                Global.collectionLogin.InsertOne(new User { _id = login,password=passwd,author=login});
+                Global.collectionLogin.InsertOne(new User { _id = login, password = passwd, author = login });
                 return true;
             } catch
             {
@@ -40,7 +40,7 @@ namespace petDashboard
             }
         }
 
-        public static bool loginBD(string login,string passwd)
+        public static bool loginBD(string login, string passwd)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace petDashboard
             }
         }
 
-        public static void updateInfo(string name, string email, string foto, string senha,string periodo)
+        public static void updateInfo(string name, string email, string foto, string senha, string periodo)
         {
             try
             {
@@ -90,11 +90,11 @@ namespace petDashboard
                 Global.user.password = senha;
                 Global.user.periodo = periodo;
 
-                string filter = "{'_id':'"+Global.user._id + "'}";
+                string filter = "{'_id':'" + Global.user._id + "'}";
 
                 BsonDocument filterdoc = BsonDocument.Parse(filter);
-                
-                Global.collectionLogin.ReplaceOne(filterdoc,Global.user);
+
+                Global.collectionLogin.ReplaceOne(filterdoc, Global.user);
 
                 var results = Global.collectionLogin.Find(x => x._id == Global.user._id).ToList();
                 if (results.Count == 1)
@@ -103,10 +103,10 @@ namespace petDashboard
                 }
             } catch
             {
-                
+
             }
         }
-        public static bool newMeeting(FlowLayoutPanel item, DateTime time,string privacy)
+        public static bool newMeeting(FlowLayoutPanel item, DateTime time, string privacy)
         {
             string conteudo = "";
             int err = 0;
@@ -130,8 +130,8 @@ namespace petDashboard
                 List<Meeting> meetings = new List<Meeting>();
                 try
                 {
-                    Global.collectionMeeting.InsertOne(new Meeting { date = time,content = conteudo,author = Global.user._id, privacy = privacy});
-                    foreach(var i in item.Controls.OfType<MeetingItem>())
+                    Global.collectionMeeting.InsertOne(new Meeting { date = time, content = conteudo, author = Global.user._id, privacy = privacy });
+                    foreach (var i in item.Controls.OfType<MeetingItem>())
                     {
                         Meeting localItem = new Meeting();
 
@@ -161,6 +161,20 @@ namespace petDashboard
         public static List<Meeting> allMyMeetings()
         {
             var results = Global.collectionMeeting.Find(x => x.author == Global.user.author).ToList();
+
+            return results;
+        }
+
+        public static List<Meeting> allMeetingPublic()
+        {
+            var results = Global.collectionMeeting.Find(x => x.privacy == "Publico" || x.author == Global.user._id).ToList();
+
+            return results;
+        }
+
+        public static List<Meeting> allMeetingPublicTags(string tag)
+        {
+            var results = Global.collectionMeetingTags.Find(x => (x.privacy == "Publico" || x.author == Global.user._id) && x.tag == tag).ToList();
 
             return results;
         }

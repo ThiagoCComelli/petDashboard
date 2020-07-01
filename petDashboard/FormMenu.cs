@@ -39,7 +39,7 @@ namespace petDashboard
             {
                 currentChildForm.Close();
                 currentChildForm = null;
-                panelDesktop.Controls.Clear();
+                openChildForm(new FormHome(this));
             }
         }
         public void openChildForm(Form childForm)
@@ -141,13 +141,7 @@ namespace petDashboard
             WindowState = FormWindowState.Minimized;
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormLogin login = new FormLogin();
-            login.ShowDialog();
-            this.Close();
-        }
+        
 
         private void profileBtn_Click(object sender, EventArgs e)
         {
@@ -167,6 +161,11 @@ namespace petDashboard
         private void consultarBtn_Click(object sender, EventArgs e)
         {
             openChildForm(new FormConsult(panelDesktop));
+        }
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+            openChildForm(new FormHome(this));
         }
     }
 }
