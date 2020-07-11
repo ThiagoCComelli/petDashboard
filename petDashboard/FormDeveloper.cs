@@ -13,8 +13,11 @@ namespace petDashboard
 {
     public partial class FormDeveloper : Form
     {
-        public FormDeveloper()
+        FormMenu root;
+        public FormDeveloper(FormMenu _root)
         {
+            root = _root;
+
             InitializeComponent();
             if (Global.user.mode == null) 
             {
@@ -43,6 +46,14 @@ namespace petDashboard
         {
             System.Windows.Forms.Clipboard.SetText("+55048996030226");
             Process.Start("https://api.whatsapp.com/send?phone=5548996030226");
+        }
+
+        private void logoutIcon_Click(object sender, EventArgs e)
+        {
+            root.Hide();
+            FormLogin login = new FormLogin();
+            login.ShowDialog();
+            root.Close();
         }
     }
 }

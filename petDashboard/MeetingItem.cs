@@ -68,5 +68,12 @@ namespace petDashboard
         {
             _privacy = "Publico";
         }
+
+        public void putAllPrivate()
+        {
+            _privacy = "Privado";
+            radioPrivate.Checked = true;
+            radioPublic.Checked = false;
+        }
     }
 }

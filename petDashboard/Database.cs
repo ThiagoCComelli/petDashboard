@@ -80,7 +80,7 @@ namespace petDashboard
             }
         }
 
-        public static void updateInfo(string name, string email, string foto, string senha, string periodo)
+        public static bool updateInfo(string name, string email, string foto, string senha, string periodo)
         {
             try
             {
@@ -101,9 +101,10 @@ namespace petDashboard
                 {
                     Global.user = results[0];
                 }
+                return true;
             } catch
             {
-
+                return false;
             }
         }
         public static bool newMeeting(FlowLayoutPanel item, DateTime time, string privacy)
@@ -117,7 +118,7 @@ namespace petDashboard
                 if (i.Conteudo != "" && i.Categoria != "Escolha um item" && i.Privacy != null)
                 {
                     i.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-                    conteudo += i.Categoria.ToUpper() + "\n" + i.Conteudo + "\n\n";
+                    conteudo += i.Categoria.ToUpper() + ":\\n" + i.Conteudo + "\\n\\n\\n<=============================================>\\n\\n";
                 }
                 else
                 {
@@ -138,7 +139,14 @@ namespace petDashboard
                         localItem.date = time;
                         localItem.content = i.Conteudo;
                         localItem.author = Global.user._id;
-                        localItem.privacy = i.Privacy;
+                        if (privacy == "Privado")
+                        {
+                            localItem.privacy = "Privado";
+                        } else
+                        {
+                            localItem.privacy = i.Privacy;
+                        }
+
                         localItem.tag = i.Categoria;
 
                         meetings.Add(localItem);

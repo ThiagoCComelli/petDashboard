@@ -49,6 +49,8 @@ namespace petDashboard
                 meeting.Privacy = i.privacy;
                 flowMyMeetings.Controls.Add(meeting);
             }
+
+
         }
 
         private void FormMyMeetings_Load(object sender, EventArgs e)
@@ -62,6 +64,7 @@ namespace petDashboard
             } else
             {
                 label1.Text = "Consultar reuniões / Pesquisar por tag";
+                panel1.Visible = true;
             }
             if(op != "allPerTags")
             {

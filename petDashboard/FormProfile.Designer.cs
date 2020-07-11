@@ -64,6 +64,7 @@ namespace petDashboard
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.profilePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarImage)).BeginInit();
             this.editPanel.SuspendLayout();
@@ -104,7 +105,7 @@ namespace petDashboard
             this.fotoLabel.ForeColor = System.Drawing.Color.Gainsboro;
             this.fotoLabel.Location = new System.Drawing.Point(370, 230);
             this.fotoLabel.Name = "fotoLabel";
-            this.fotoLabel.Size = new System.Drawing.Size(224, 21);
+            this.fotoLabel.Size = new System.Drawing.Size(271, 21);
             this.fotoLabel.TabIndex = 17;
             // 
             // permissaoLabel
@@ -115,7 +116,7 @@ namespace petDashboard
             this.permissaoLabel.ForeColor = System.Drawing.Color.Gainsboro;
             this.permissaoLabel.Location = new System.Drawing.Point(329, 191);
             this.permissaoLabel.Name = "permissaoLabel";
-            this.permissaoLabel.Size = new System.Drawing.Size(265, 21);
+            this.permissaoLabel.Size = new System.Drawing.Size(271, 21);
             this.permissaoLabel.TabIndex = 16;
             // 
             // loginLabel
@@ -175,7 +176,7 @@ namespace petDashboard
             this.periodoLabel.ForeColor = System.Drawing.Color.Gainsboro;
             this.periodoLabel.Location = new System.Drawing.Point(398, 114);
             this.periodoLabel.Name = "periodoLabel";
-            this.periodoLabel.Size = new System.Drawing.Size(196, 21);
+            this.periodoLabel.Size = new System.Drawing.Size(271, 21);
             this.periodoLabel.TabIndex = 11;
             // 
             // emailLabel
@@ -197,7 +198,7 @@ namespace petDashboard
             this.nameLabel.ForeColor = System.Drawing.Color.Gainsboro;
             this.nameLabel.Location = new System.Drawing.Point(327, 35);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(267, 21);
+            this.nameLabel.Size = new System.Drawing.Size(271, 21);
             this.nameLabel.TabIndex = 9;
             // 
             // editBtn
@@ -503,12 +504,23 @@ namespace petDashboard
             this.label6.TabIndex = 2;
             this.label6.Text = "Nome:";
             // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(0, 441);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(758, 36);
+            this.label7.TabIndex = 8;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(758, 477);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.profilePanel);
             this.Controls.Add(this.editPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -557,5 +569,6 @@ namespace petDashboard
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label permissaoLabel;
         private System.Windows.Forms.Label label9;
+        private Label label7;
     }
 }

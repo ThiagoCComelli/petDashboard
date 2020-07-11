@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Privacy_ = new System.Windows.Forms.Label();
             this.conteudo = new System.Windows.Forms.TextBox();
             this.autor = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dia = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Privacy_ = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,8 +49,19 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(730, 143);
+            this.panel1.Size = new System.Drawing.Size(714, 143);
             this.panel1.TabIndex = 0;
+            // 
+            // Privacy_
+            // 
+            this.Privacy_.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Privacy_.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Privacy_.Location = new System.Drawing.Point(602, 4);
+            this.Privacy_.Name = "Privacy_";
+            this.Privacy_.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Privacy_.Size = new System.Drawing.Size(109, 21);
+            this.Privacy_.TabIndex = 5;
+            this.Privacy_.Text = "null";
             // 
             // conteudo
             // 
@@ -63,7 +74,7 @@
             this.conteudo.Name = "conteudo";
             this.conteudo.ReadOnly = true;
             this.conteudo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.conteudo.Size = new System.Drawing.Size(724, 115);
+            this.conteudo.Size = new System.Drawing.Size(708, 115);
             this.conteudo.TabIndex = 4;
             // 
             // autor
@@ -110,17 +121,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Reuniao do dia:";
             // 
-            // Privacy_
-            // 
-            this.Privacy_.AutoSize = true;
-            this.Privacy_.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Privacy_.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Privacy_.Location = new System.Drawing.Point(656, 4);
-            this.Privacy_.Name = "Privacy_";
-            this.Privacy_.Size = new System.Drawing.Size(36, 21);
-            this.Privacy_.TabIndex = 5;
-            this.Privacy_.Text = "null";
-            // 
             // MeetingsInterfaceItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,7 +128,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.Controls.Add(this.panel1);
             this.Name = "MeetingsInterfaceItem";
-            this.Size = new System.Drawing.Size(737, 150);
+            this.Size = new System.Drawing.Size(722, 150);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

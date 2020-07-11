@@ -27,7 +27,7 @@ namespace petDashboard
         public string Conteudo
         {
             get { return _conteudo; }
-            set { _conteudo = value; conteudo.Text = value; }
+            set { _conteudo = value; conteudo.Text = value.Replace("\\n",Environment.NewLine); }
         }
 
         [Category("Custom Props")]

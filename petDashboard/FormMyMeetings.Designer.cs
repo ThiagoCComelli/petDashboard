@@ -101,6 +101,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 33);
             this.panel1.TabIndex = 6;
+            this.panel1.Visible = false;
             // 
             // FormMyMeetings
             // 

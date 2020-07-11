@@ -27,11 +27,7 @@ namespace petDashboard
         {
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            if(Global.user.mode == null)
-            {
-                panel1.Visible = false;
-                openChildForm(new FormDeveloper());
-            }
+            
         }
         public void reset()
         {
@@ -39,8 +35,8 @@ namespace petDashboard
             {
                 currentChildForm.Close();
                 currentChildForm = null;
-                openChildForm(new FormHome(this));
             }
+            openChildForm(new FormHome(this));
         }
         public void openChildForm(Form childForm)
         {
@@ -100,7 +96,7 @@ namespace petDashboard
 
         private void developerBtn_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormDeveloper());
+            openChildForm(new FormDeveloper(this));
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -165,7 +161,14 @@ namespace petDashboard
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            openChildForm(new FormHome(this));
+            if (Global.user.mode == null)
+            {
+                panel1.Visible = false;
+                openChildForm(new FormDeveloper(this));
+            } else
+            {
+                openChildForm(new FormHome(this));
+            }
         }
     }
 }

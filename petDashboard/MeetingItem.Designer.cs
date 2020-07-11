@@ -80,26 +80,26 @@
             // radioPublic
             // 
             this.radioPublic.AutoSize = true;
-            this.radioPublic.Checked = true;
             this.radioPublic.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioPublic.ForeColor = System.Drawing.Color.Gainsboro;
             this.radioPublic.Location = new System.Drawing.Point(631, 9);
             this.radioPublic.Name = "radioPublic";
             this.radioPublic.Size = new System.Drawing.Size(66, 20);
             this.radioPublic.TabIndex = 6;
-            this.radioPublic.TabStop = true;
             this.radioPublic.Text = "Publico";
             this.radioPublic.UseVisualStyleBackColor = true;
             this.radioPublic.CheckedChanged += new System.EventHandler(this.radioPublic_CheckedChanged);
             // 
             // radioPrivate
             // 
+            this.radioPrivate.Checked = true;
             this.radioPrivate.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioPrivate.ForeColor = System.Drawing.Color.Gainsboro;
             this.radioPrivate.Location = new System.Drawing.Point(554, 9);
             this.radioPrivate.Name = "radioPrivate";
             this.radioPrivate.Size = new System.Drawing.Size(71, 20);
             this.radioPrivate.TabIndex = 5;
+            this.radioPrivate.TabStop = true;
             this.radioPrivate.Text = "Privado";
             this.radioPrivate.UseVisualStyleBackColor = true;
             this.radioPrivate.CheckedChanged += new System.EventHandler(this.radioPrivate_CheckedChanged);

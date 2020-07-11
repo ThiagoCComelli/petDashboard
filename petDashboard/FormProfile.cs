@@ -86,7 +86,17 @@ namespace petDashboard
 
         private void editConfirmBtn_Click(object sender, EventArgs e)
         {
-            DB.updateInfo(nome.Text,email.Text, foto.Text, senha.Text, periodo.Text);
+            if(DB.updateInfo(nome.Text,email.Text, foto.Text, senha.Text, periodo.Text))
+            {
+                label7.ForeColor = System.Drawing.Color.Green;
+                label7.Text = "Operação realizada com sucesso!";
+                changeInfo();
+                switchPanel(profilePanel);
+            } else
+            {
+                label7.ForeColor = System.Drawing.Color.Red;
+                label7.Text = "Falha na realização da operação!";
+            }
 
         }
     }

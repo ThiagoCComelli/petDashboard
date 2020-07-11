@@ -32,6 +32,7 @@ namespace petDashboard
             {
                 resultText.Text = "Operacao realizada com sucesso";
                 resultText.ForeColor = System.Drawing.Color.Green;
+
                 
             } else
             {
@@ -49,11 +50,21 @@ namespace petDashboard
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             privacy = "Privado";
+            
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             privacy = "Publico";
+        }
+
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            foreach (var i in flowMeeting.Controls.OfType<MeetingItem>())
+            {
+                i.Privacy = "Privado";
+                i.putAllPrivate();
+            }
         }
     }
 }
