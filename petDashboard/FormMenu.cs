@@ -44,6 +44,7 @@ namespace petDashboard
             {
                 currentChildForm.Close();
                 currentChildForm = null;
+                openChildForm(new FormHome(this));
             }
             else
             {
@@ -169,6 +170,36 @@ namespace petDashboard
             {
                 openChildForm(new FormHome(this));
             }
+        }
+
+        private void hospitalBtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormProjetos("hospital"));
+        }
+
+        private void aulasBtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormProjetos("aula"));
+        }
+
+        private void labBtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormProjetos("laboratio"));
+        }
+
+        private void eventBtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormProjetos("evento"));
+        }
+
+        private void seminarioBtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormProjetos("seminario"));
+        }
+
+        private void cineBtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormProjetos("cinepet"));
         }
     }
 }

@@ -28,25 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.reuniaoPanel = new System.Windows.Forms.Panel();
-            this.usersPanel = new System.Windows.Forms.Panel();
-            this.projectsPanel = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.upPanel = new System.Windows.Forms.Panel();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.closeIcon = new FontAwesome.Sharp.IconPictureBox();
-            this.redimensionIcon = new FontAwesome.Sharp.IconPictureBox();
-            this.minimizeIcon = new FontAwesome.Sharp.IconPictureBox();
             this.novaReuniaoBtn = new FontAwesome.Sharp.IconButton();
             this.consultarBtn = new FontAwesome.Sharp.IconButton();
             this.reuniaoBtn = new FontAwesome.Sharp.IconButton();
             this.developerBtn = new FontAwesome.Sharp.IconButton();
+            this.usersPanel = new System.Windows.Forms.Panel();
             this.profileBtn = new FontAwesome.Sharp.IconButton();
             this.allusersBtn = new FontAwesome.Sharp.IconButton();
             this.usersBtn = new FontAwesome.Sharp.IconButton();
+            this.projectsPanel = new System.Windows.Forms.Panel();
             this.cineBtn = new FontAwesome.Sharp.IconButton();
             this.seminarioBtn = new FontAwesome.Sharp.IconButton();
             this.eventBtn = new FontAwesome.Sharp.IconButton();
@@ -54,18 +47,26 @@
             this.aulasBtn = new FontAwesome.Sharp.IconButton();
             this.hospitalBtn = new FontAwesome.Sharp.IconButton();
             this.projectBtn = new FontAwesome.Sharp.IconButton();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.upPanel = new System.Windows.Forms.Panel();
+            this.closeIcon = new FontAwesome.Sharp.IconPictureBox();
+            this.redimensionIcon = new FontAwesome.Sharp.IconPictureBox();
+            this.minimizeIcon = new FontAwesome.Sharp.IconPictureBox();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.reuniaoPanel.SuspendLayout();
             this.usersPanel.SuspendLayout();
             this.projectsPanel.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.upPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redimensionIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,128 +99,6 @@
             this.reuniaoPanel.Size = new System.Drawing.Size(209, 65);
             this.reuniaoPanel.TabIndex = 9;
             this.reuniaoPanel.Visible = false;
-            // 
-            // usersPanel
-            // 
-            this.usersPanel.Controls.Add(this.profileBtn);
-            this.usersPanel.Controls.Add(this.allusersBtn);
-            this.usersPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.usersPanel.Location = new System.Drawing.Point(0, 450);
-            this.usersPanel.Name = "usersPanel";
-            this.usersPanel.Size = new System.Drawing.Size(209, 66);
-            this.usersPanel.TabIndex = 6;
-            this.usersPanel.Visible = false;
-            // 
-            // projectsPanel
-            // 
-            this.projectsPanel.Controls.Add(this.cineBtn);
-            this.projectsPanel.Controls.Add(this.seminarioBtn);
-            this.projectsPanel.Controls.Add(this.eventBtn);
-            this.projectsPanel.Controls.Add(this.labBtn);
-            this.projectsPanel.Controls.Add(this.aulasBtn);
-            this.projectsPanel.Controls.Add(this.hospitalBtn);
-            this.projectsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.projectsPanel.Location = new System.Drawing.Point(0, 223);
-            this.projectsPanel.Name = "projectsPanel";
-            this.projectsPanel.Size = new System.Drawing.Size(209, 195);
-            this.projectsPanel.TabIndex = 4;
-            this.projectsPanel.Visible = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 44);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(209, 147);
-            this.panel5.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(209, 44);
-            this.panel4.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PET CCO - Dashboard";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // upPanel
-            // 
-            this.upPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.upPanel.Controls.Add(this.closeIcon);
-            this.upPanel.Controls.Add(this.redimensionIcon);
-            this.upPanel.Controls.Add(this.minimizeIcon);
-            this.upPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.upPanel.Location = new System.Drawing.Point(226, 0);
-            this.upPanel.Name = "upPanel";
-            this.upPanel.Size = new System.Drawing.Size(774, 44);
-            this.upPanel.TabIndex = 1;
-            this.upPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(226, 44);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(774, 516);
-            this.panelDesktop.TabIndex = 2;
-            // 
-            // closeIcon
-            // 
-            this.closeIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.closeIcon.ForeColor = System.Drawing.Color.Gainsboro;
-            this.closeIcon.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.closeIcon.IconColor = System.Drawing.Color.Gainsboro;
-            this.closeIcon.IconSize = 18;
-            this.closeIcon.Location = new System.Drawing.Point(744, 4);
-            this.closeIcon.Name = "closeIcon";
-            this.closeIcon.Size = new System.Drawing.Size(18, 18);
-            this.closeIcon.TabIndex = 2;
-            this.closeIcon.TabStop = false;
-            this.closeIcon.Click += new System.EventHandler(this.closeIcon_Click);
-            // 
-            // redimensionIcon
-            // 
-            this.redimensionIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.redimensionIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.redimensionIcon.ForeColor = System.Drawing.Color.Gainsboro;
-            this.redimensionIcon.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.redimensionIcon.IconColor = System.Drawing.Color.Gainsboro;
-            this.redimensionIcon.IconSize = 18;
-            this.redimensionIcon.Location = new System.Drawing.Point(720, 4);
-            this.redimensionIcon.Name = "redimensionIcon";
-            this.redimensionIcon.Size = new System.Drawing.Size(18, 18);
-            this.redimensionIcon.TabIndex = 1;
-            this.redimensionIcon.TabStop = false;
-            this.redimensionIcon.Click += new System.EventHandler(this.redimensionIcon_Click);
-            // 
-            // minimizeIcon
-            // 
-            this.minimizeIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.minimizeIcon.ForeColor = System.Drawing.Color.Gainsboro;
-            this.minimizeIcon.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.minimizeIcon.IconColor = System.Drawing.Color.Gainsboro;
-            this.minimizeIcon.IconSize = 18;
-            this.minimizeIcon.Location = new System.Drawing.Point(696, 4);
-            this.minimizeIcon.Name = "minimizeIcon";
-            this.minimizeIcon.Size = new System.Drawing.Size(18, 18);
-            this.minimizeIcon.TabIndex = 0;
-            this.minimizeIcon.TabStop = false;
-            this.minimizeIcon.Click += new System.EventHandler(this.minimizeIcon_Click);
             // 
             // novaReuniaoBtn
             // 
@@ -317,6 +196,17 @@
             this.developerBtn.UseVisualStyleBackColor = true;
             this.developerBtn.Click += new System.EventHandler(this.developerBtn_Click);
             // 
+            // usersPanel
+            // 
+            this.usersPanel.Controls.Add(this.profileBtn);
+            this.usersPanel.Controls.Add(this.allusersBtn);
+            this.usersPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.usersPanel.Location = new System.Drawing.Point(0, 450);
+            this.usersPanel.Name = "usersPanel";
+            this.usersPanel.Size = new System.Drawing.Size(209, 66);
+            this.usersPanel.TabIndex = 6;
+            this.usersPanel.Visible = false;
+            // 
             // profileBtn
             // 
             this.profileBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
@@ -389,6 +279,21 @@
             this.usersBtn.UseVisualStyleBackColor = true;
             this.usersBtn.Click += new System.EventHandler(this.usersBtn_Click);
             // 
+            // projectsPanel
+            // 
+            this.projectsPanel.Controls.Add(this.cineBtn);
+            this.projectsPanel.Controls.Add(this.seminarioBtn);
+            this.projectsPanel.Controls.Add(this.eventBtn);
+            this.projectsPanel.Controls.Add(this.labBtn);
+            this.projectsPanel.Controls.Add(this.aulasBtn);
+            this.projectsPanel.Controls.Add(this.hospitalBtn);
+            this.projectsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.projectsPanel.Location = new System.Drawing.Point(0, 223);
+            this.projectsPanel.Name = "projectsPanel";
+            this.projectsPanel.Size = new System.Drawing.Size(209, 195);
+            this.projectsPanel.TabIndex = 4;
+            this.projectsPanel.Visible = false;
+            // 
             // cineBtn
             // 
             this.cineBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
@@ -411,6 +316,7 @@
             this.cineBtn.Text = "Cinepet";
             this.cineBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cineBtn.UseVisualStyleBackColor = false;
+            this.cineBtn.Click += new System.EventHandler(this.cineBtn_Click);
             // 
             // seminarioBtn
             // 
@@ -434,6 +340,7 @@
             this.seminarioBtn.Text = "Seminarios";
             this.seminarioBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.seminarioBtn.UseVisualStyleBackColor = false;
+            this.seminarioBtn.Click += new System.EventHandler(this.seminarioBtn_Click);
             // 
             // eventBtn
             // 
@@ -457,6 +364,7 @@
             this.eventBtn.Text = "Eventos";
             this.eventBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.eventBtn.UseVisualStyleBackColor = false;
+            this.eventBtn.Click += new System.EventHandler(this.eventBtn_Click);
             // 
             // labBtn
             // 
@@ -480,6 +388,7 @@
             this.labBtn.Text = "Laboratorios";
             this.labBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.labBtn.UseVisualStyleBackColor = false;
+            this.labBtn.Click += new System.EventHandler(this.labBtn_Click);
             // 
             // aulasBtn
             // 
@@ -503,6 +412,7 @@
             this.aulasBtn.Text = "Aulas";
             this.aulasBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.aulasBtn.UseVisualStyleBackColor = false;
+            this.aulasBtn.Click += new System.EventHandler(this.aulasBtn_Click);
             // 
             // hospitalBtn
             // 
@@ -526,6 +436,7 @@
             this.hospitalBtn.Text = "Hospital de Custodia";
             this.hospitalBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.hospitalBtn.UseVisualStyleBackColor = false;
+            this.hospitalBtn.Click += new System.EventHandler(this.hospitalBtn_Click);
             // 
             // projectBtn
             // 
@@ -551,6 +462,15 @@
             this.projectBtn.UseVisualStyleBackColor = true;
             this.projectBtn.Click += new System.EventHandler(this.projectBtn_Click);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 44);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(209, 147);
+            this.panel5.TabIndex = 1;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -563,6 +483,93 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(209, 44);
+            this.panel4.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "PET CCO - Dashboard";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // upPanel
+            // 
+            this.upPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.upPanel.Controls.Add(this.closeIcon);
+            this.upPanel.Controls.Add(this.redimensionIcon);
+            this.upPanel.Controls.Add(this.minimizeIcon);
+            this.upPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.upPanel.Location = new System.Drawing.Point(226, 0);
+            this.upPanel.Name = "upPanel";
+            this.upPanel.Size = new System.Drawing.Size(774, 44);
+            this.upPanel.TabIndex = 1;
+            this.upPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // closeIcon
+            // 
+            this.closeIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.closeIcon.ForeColor = System.Drawing.Color.Gainsboro;
+            this.closeIcon.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.closeIcon.IconColor = System.Drawing.Color.Gainsboro;
+            this.closeIcon.IconSize = 18;
+            this.closeIcon.Location = new System.Drawing.Point(744, 4);
+            this.closeIcon.Name = "closeIcon";
+            this.closeIcon.Size = new System.Drawing.Size(18, 18);
+            this.closeIcon.TabIndex = 2;
+            this.closeIcon.TabStop = false;
+            this.closeIcon.Click += new System.EventHandler(this.closeIcon_Click);
+            // 
+            // redimensionIcon
+            // 
+            this.redimensionIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.redimensionIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.redimensionIcon.ForeColor = System.Drawing.Color.Gainsboro;
+            this.redimensionIcon.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.redimensionIcon.IconColor = System.Drawing.Color.Gainsboro;
+            this.redimensionIcon.IconSize = 18;
+            this.redimensionIcon.Location = new System.Drawing.Point(720, 4);
+            this.redimensionIcon.Name = "redimensionIcon";
+            this.redimensionIcon.Size = new System.Drawing.Size(18, 18);
+            this.redimensionIcon.TabIndex = 1;
+            this.redimensionIcon.TabStop = false;
+            this.redimensionIcon.Click += new System.EventHandler(this.redimensionIcon_Click);
+            // 
+            // minimizeIcon
+            // 
+            this.minimizeIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.minimizeIcon.ForeColor = System.Drawing.Color.Gainsboro;
+            this.minimizeIcon.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.minimizeIcon.IconColor = System.Drawing.Color.Gainsboro;
+            this.minimizeIcon.IconSize = 18;
+            this.minimizeIcon.Location = new System.Drawing.Point(696, 4);
+            this.minimizeIcon.Name = "minimizeIcon";
+            this.minimizeIcon.Size = new System.Drawing.Size(18, 18);
+            this.minimizeIcon.TabIndex = 0;
+            this.minimizeIcon.TabStop = false;
+            this.minimizeIcon.Click += new System.EventHandler(this.minimizeIcon_Click);
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(226, 44);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(774, 516);
+            this.panelDesktop.TabIndex = 2;
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -574,6 +581,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1000, 560);
             this.Name = "FormMenu";
             this.Load += new System.EventHandler(this.FormMenu_Load);
@@ -582,12 +590,12 @@
             this.usersPanel.ResumeLayout(false);
             this.projectsPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.upPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redimensionIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -623,4 +631,3 @@
         private FontAwesome.Sharp.IconButton reuniaoBtn;
     }
 }
-
